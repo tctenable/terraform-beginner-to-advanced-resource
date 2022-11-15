@@ -1,5 +1,5 @@
 resource "aws_db_instance" "default" {
-  allocated_storage    = 5
+  allocated_storage    = 200
   storage_type         = "gp2"
   engine               = "mysql"
   engine_version       = "5.7"
@@ -8,5 +8,5 @@ resource "aws_db_instance" "default" {
   username             = "foo"
   password             = "${file("../rds_pass.txt")}"
   parameter_group_name = "default.mysql5.7"
-  skip_final_snapshot = "true"
+  skip_final_snapshot  = "true"
 }
