@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_eip" "lb" {
-  vpc      = true
+  vpc = true
 }
 
 output "eip" {
@@ -14,6 +14,46 @@ output "eip" {
 
 resource "aws_s3_bucket" "mys3" {
   bucket = "kplabs-attribute-demo-001"
+
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
+
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
+
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
+
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
+
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
 }
 
 output "mys3bucket" {

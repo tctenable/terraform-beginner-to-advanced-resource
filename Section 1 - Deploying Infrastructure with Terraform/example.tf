@@ -22,3 +22,32 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+
+resource "aws_vpc" "<resource_name>" {
+  cidr_block = "<cidr>"
+
+  tags = {
+    Name = "main"
+  }
+}
+resource "aws_vpc" "<resource_name>" {
+  cidr_block = "<cidr>"
+
+  tags = {
+    Name = "main"
+  }
+}
+resource "aws_vpc" "<resource_name>" {
+  cidr_block = "<cidr>"
+
+  tags = {
+    Name = "main"
+  }
+}
+resource "aws_vpc" "<resource_name>" {
+  cidr_block = "<cidr>"
+
+  tags = {
+    Name = "main"
+  }
+}
